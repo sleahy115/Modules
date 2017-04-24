@@ -7,6 +7,12 @@ function pet_menu() {
         'access callback' => TRUE,
         'type' => MENU_NORMAL_ITEM,
     );
+    $items['groceries'] = array(
+        'title' => 'groceries',
+        'page callback' => 'display_groceries',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
     return $items;
 }
 
@@ -18,4 +24,16 @@ function display_pet() {
     <p>alsndsaljndlsandlknaslkdnaslkndalndsalkdnaslkndlaskndlasknlkndlaskndlaksndlkasndlkasndlkasndl</p>
     <a href="https://en.wikipedia.org/wiki/Bulldog">Learn more about bulldogs</a>
     ';
+}
+
+function display_groceries() {
+  $groceries = array(
+    'eggs' => 3.99,
+    'tortillas' => 3.00,
+    'orange juice' => 3.50,
+    'bacon' => 5.00,
+    'hot sauce' => 6.00,
+  );
+  $price = $groceries['eggs'];
+  return '<h1>The price is</h1>' . $price; 
 }
