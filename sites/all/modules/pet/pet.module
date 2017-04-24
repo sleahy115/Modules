@@ -1,0 +1,21 @@
+<?php
+function pet_menu() {
+    $items = array();
+    $items['pet profile'] = array(
+        'title' => 'pet profile',
+        'page callback' => 'display_pet',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function display_pet() {
+    return '<h1>Fluffy</h1>
+    <h3>Age: 2 years</h3><br>
+    <h3>Breed: bulldog</h3><br>
+    <h3>About</h3><br>
+    <p>alsndsaljndlsandlknaslkdnaslkndalndsalkdnaslkndlaskndlasknlkndlaskndlaksndlkasndlkasndlkasndl</p>
+    <a href="https://en.wikipedia.org/wiki/Bulldog">Learn more about bulldogs</a>
+    ';
+}
